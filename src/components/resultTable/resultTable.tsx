@@ -32,7 +32,7 @@ export const ResultsTable = (props: ResultsTableProps) => {
                                 index += 1;
                                 return (
                                     <tr key={index} className="text-white">
-                                        <td style={{fontSize: 'smaller'}}>{convertDateToCustomFormat(new Date(data.ResultDate))}</td>
+                                        <td style={{fontSize: 'x-small'}}>{convertDateToCustomFormat(new Date(data.ResultDate))}</td>
                                         <td>{getResultNumber(data.FirstSlotResult)}<br></br><span style={{fontSize: 'smaller'}}>{getDrawNumber(data.FirstSlotResult)}</span></td>
                                         <td>{getResultNumber(data.SecondSlotResult)}<br></br><span style={{fontSize: 'smaller'}}>{getDrawNumber(data.SecondSlotResult)}</span></td>
                                         <td>{getResultNumber(data.ThirdSlotResult)}<br></br><span style={{fontSize: 'smaller'}}>{getDrawNumber(data.ThirdSlotResult)}</span></td>
