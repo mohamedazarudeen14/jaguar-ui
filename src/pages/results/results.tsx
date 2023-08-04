@@ -84,7 +84,21 @@ export const Results = () => {
     if (resultState.finalResult) {
         return (
             <div className={styles.mainDiv}>
-                <div className={`${styles.lotteries} p-0`}>
+                <div className={styles.breadcrumb}>
+                    <div className='container'>
+                        <div className='row justify-content-center'>
+                            <div className='col-xl-8 col-lg-6'>
+                                <div className={styles.breadcrumbContent}>
+                                    <span className={styles.subTitle}>
+                                        Result
+                                    </span>
+                                    <h2 className={`mb-0 ${styles.title}`}>See Today Result</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className={`${styles.lotteries} p-5`}>
                     <div className='container'>
                         <div>
                             <div className={styles.lotteriesSelectionMenu}></div>
