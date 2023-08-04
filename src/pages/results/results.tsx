@@ -98,7 +98,7 @@ export const Results = () => {
                         </div>
                     </div>
                 </div>
-                <div className={`${styles.lotteries} pt-5`}>
+                <div className={`${styles.lotteries} pt-2`}>
                     <div className='container'>
                         <div>
                             <div className={styles.lotteriesSelectionMenu}></div>
