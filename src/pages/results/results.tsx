@@ -8,7 +8,7 @@ import styles from './results.module.scss';
 
 export const Results = () => {
     const backGround: CustomeStyle = { background: "orange" }
-    const firstSlotLabelText = " 11.30 PM";
+    const firstSlotLabelText = " 11.30 AM";
     const secondSlotLabelText = " 05:30 PM";
     const thirdSlotLabelText = " 07:30 PM";
     const baseBackground: CustomeStyle = {background: "linear-gradient(251.22deg, #0C244B 0%, #0B3846 99.53%)"}
@@ -113,7 +113,7 @@ export const Results = () => {
                                                     data-bs-target="#pills-numbers" type="button"
                                                     role="tab" aria-controls="pills-numbers" aria-selected="false"
                                                     onClick={firstSlotButtonClick}>
-                                                    11.30 pm
+                                                    11.30 am
                                                 </button>
                                             </li>
                                             <li className="nav-item" role="presentation">
@@ -142,8 +142,8 @@ export const Results = () => {
                                 <div className={`${styles.tableBody} ${styles.pickingNumberBody} mt-2 mb-4 pt-0`}>
                                     <div className='tab-content' id='pills-tabContent'>
                                         <div className='tab-pane fade active show' id='pills-Numbers' role='tabpanel' aria-labelledby='pills-numbers-tab'>
-                                            <h4 className='text-white py-4'>Prize Details -
-                                                <span style={{ color: "orange" }}>{resultState.resultLabel}</span>
+                                            <h4 className='text-black py-4'>Prize Details -
+                                                <span style={{ color: "red" }}>{resultState.resultLabel}</span>
                                             </h4>
                                             <NumberResultTable data={resultState.todayResult}></NumberResultTable>
                                             <ResultsTable tableData={resultState.fourDigitNumbers}></ResultsTable>

@@ -46,7 +46,7 @@ export const DownloadDateForm = (props: DownloadDataFormProps) => {
                     </div>
                     <div className="col-lg-4 col-md-6">
                         <div className="d-block check-box mx-auto">
-                            <h4 className={`text-white ${styles.title}`}> Click</h4>
+                            <h4 className={`text-black ${styles.title}`}> Click</h4>
                             <button className={styles.btnPok} id="btn_search" onClick={onSearchButtonClick}>
                                 Search <i className={`${styles.iTag} ${styles.faSolid} fa-angles-right`}></i>
                             </button>

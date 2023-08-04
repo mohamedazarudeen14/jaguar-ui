@@ -11,15 +11,15 @@ export const NumberResultTable = (props: NumberResultTableProps) => {
     }
     return (
         <div className='table-responsive'>
-            <table className="table text-white bg-bluemix table-bordered ">
+            <table className="table text-black bg-bluemix table-bordered">
                 {data ?
                     <tbody>
                         <tr className='py-3'>
-                            <th className='text-white pt-3 fw-bold py-2 bg-bluemix'>Date</th>
+                            <th className='text-black pt-3 fw-bold py-2 bg-bluemix'>Date</th>
                             <td className={`${styles.dateLabel} py-3 lot-date fw-bold`}>{convertDateToCustomFormat(new Date(data.ResultDate))}</td>
                         </tr>
-                        <tr className='text-white'>
-                            <th className='text-white pt-3 bg-bluemix'>First Prize</th>
+                        <tr className='text-black'>
+                            <th className='text-black pt-3 bg-bluemix'>First Prize</th>
                             <td>
                                 {addLabelToResultNumbers(data.FourDigit[0])}
                                 {addLabelToResultNumbers(data.FourDigit[1])}
@@ -27,23 +27,23 @@ export const NumberResultTable = (props: NumberResultTableProps) => {
                                 {addLabelToResultNumbers(data.FourDigit[3])}
                             </td>
                         </tr>
-                        <tr className='text-white'>
-                            <th className='text-white pt-3 bg-bluemix'>Second Prize</th>
+                        <tr className='text-black'>
+                            <th className='text-black pt-3 bg-bluemix'>Second Prize</th>
                             <td>
                                 {addLabelToResultNumbers(data.ThreeDigit[0])}
                                 {addLabelToResultNumbers(data.ThreeDigit[1])}
                                 {addLabelToResultNumbers(data.ThreeDigit[2])}
                             </td>
                         </tr>
-                        <tr className='text-white'>
-                            <th className='text-white pt-3 bg-bluemix'>Third Prize</th>
+                        <tr className='text-black'>
+                            <th className='text-black pt-3 bg-bluemix'>Third Prize</th>
                             <td>
                                 {addLabelToResultNumbers(data.TwoDigit[0])}
                                 {addLabelToResultNumbers(data.TwoDigit[1])}
                             </td>
                         </tr>
-                        <tr className='text-white'>
-                            <th className='text-white pt-3 bg-bluemix'>Fourth Prize</th>
+                        <tr className='text-black'>
+                            <th className='text-black pt-3 bg-bluemix'>Fourth Prize</th>
                             <td>
                                 {addLabelToResultNumbers(data.OneDigit)}
                             </td>
@@ -51,8 +51,8 @@ export const NumberResultTable = (props: NumberResultTableProps) => {
                     </tbody>
                     :
                     <tbody>
-                        <tr className="text-white">
-                            <td className="text-white">
+                        <tr className="text-black">
+                            <td className="text-black">
                                 <center>Record Not Found</center>
                             </td>
                         </tr>

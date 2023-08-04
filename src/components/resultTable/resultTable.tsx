@@ -17,7 +17,7 @@ export const ResultsTable = (props: ResultsTableProps) => {
 
     return (
         <div className="table-responsive">
-            <table className="text-white table table-striped table-bordered">
+            <table className="text-black table table-striped table-bordered">
                 {tableData && tableData.length > 0 ?
                     <><thead>
                         <tr>
@@ -31,7 +31,7 @@ export const ResultsTable = (props: ResultsTableProps) => {
                             {tableData.map(data => {
                                 index += 1;
                                 return (
-                                    <tr key={index} className="text-white">
+                                    <tr key={index} className="text-black">
                                         <td style={{fontSize: 'x-small'}}>{convertDateToCustomFormat(new Date(data.ResultDate))}</td>
                                         <td>{getResultNumber(data.FirstSlotResult)}<br></br><span style={{fontSize: 'smaller'}}>{getDrawNumber(data.FirstSlotResult)}</span></td>
                                         <td>{getResultNumber(data.SecondSlotResult)}<br></br><span style={{fontSize: 'smaller'}}>{getDrawNumber(data.SecondSlotResult)}</span></td>
@@ -41,8 +41,8 @@ export const ResultsTable = (props: ResultsTableProps) => {
                             })}
                         </tbody></> :
                     <tbody>
-                        <tr className="text-white">
-                            <td className="text-white">
+                        <tr className="text-black">
+                            <td className="text-black">
                                 <center>Record Not Found</center>
                             </td>
                         </tr>
