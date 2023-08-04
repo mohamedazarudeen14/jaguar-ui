@@ -106,12 +106,13 @@
     min-height: 420px;
     background-repeat: no-repeat;
     webkit-background-size: cover;
-    background: linear-gradient(251.22deg, #0C244B 0%, #0B3846 99.53%);
+    //background: linear-gradient(251.22deg, #0C244B 0%, #0B3846 99.53%);
     //background-image: url(../../assets/earth.png); 
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     height: 50%;
+    background: yellowgreen;
 }
 
 .pickingNumberHeader {
