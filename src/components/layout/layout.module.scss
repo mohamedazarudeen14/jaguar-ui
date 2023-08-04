@@ -1,0 +1,22 @@
+.tabActive {
+    background: transparent !important;
+    border-bottom: 3px solid white !important;
+    border-radius: 0px !important;
+    font-weight: bold;
+    color:white
+}
+
+.tabInActive {
+    color: black;
+    font-weight: bold;
+}
+
+.header {
+    background-color: #0c3a55;
+}
+
+.logoImg {
+    width: 70px;
+    height: 60px;
+    background-size: cover;
+}

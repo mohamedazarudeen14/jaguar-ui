@@ -1,25 +1,42 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Navigate, Route, Routes } from 'react-router';
+import { Layout } from './components/layout/layout';
+import { Results } from './pages/results/results';
+import { DownloadResults } from './pages/downloadResults/downloadResults';
+import { HashRouter } from 'react-router-dom';
+import { AddResult } from './pages/addResult/addResult';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <HashRouter>
+      <Routes>
+        <Route path='/' element={<Navigate to="results" />}></Route>
+        <Route
+          path='results'
+          element={
+            <Layout>
+              <Results></Results>
+            </Layout>
+          }
+        />
+        <Route
+          path='downloadresults'
+          element={
+            <Layout>
+              <DownloadResults></DownloadResults>
+            </Layout>
+          }
+        />
+        <Route
+          path='addresult'
+          element={
+            <Layout isAddPage={true}>
+              <AddResult></AddResult>
+            </Layout>
+          }
+        />
+      </Routes>
+    </HashRouter>
   );
 }
 

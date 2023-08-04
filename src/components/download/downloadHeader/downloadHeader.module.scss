@@ -1,0 +1,120 @@
+.sectionTitle {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.subTitle {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 34px;
+    background: linear-gradient(223.14deg, #D3471A -17.3%, #988B17 101.56%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    display: inline-block;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+
+.title {
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 70px;
+    letter-spacing: 0.01em;
+    color: #0D3B54;
+    text-transform: capitalize;
+    position: relative;
+    padding-bottom: 40px;
+    margin-bottom: 70px;
+}
+
+@media (max-width: 575.98px) {
+    .sectionTitle {
+        margin-top: 40px;
+    }
+
+    .subTitle {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .title {
+        font-size: 35px;
+        line-height: 45px;
+        padding-bottom: 26px;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .sectionTitle {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .sectionTitle {
+        margin-top: -9px;
+    }
+
+    .subTitle {
+        font-size: 18px;
+        line-height: 28px;
+        margin-bottom: 0;
+    }
+
+    .title {
+        font-size: 40px;
+        line-height: 50px;
+        margin-bottom: 50px;
+        padding-bottom: 36px;
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .sectionTitle {
+        margin-top: 40px;
+    }
+
+    .subTitle {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .title {
+        font-size: 50px;
+        line-height: 60px;
+    }
+}
+
+@media (max-width: 1399.98px) {
+    .sectionTitle {
+        margin-top: 40px;
+    }
+
+    .subTitle {
+        font-size: 22px;
+        line-height: 32px;
+        margin-bottom: 8px;
+    }
+
+    .title {
+        font-size: 55px;
+        line-height: 65px;
+        margin-bottom: 60px;
+    }
+}
+
+@media (max-width: 479.98px) {
+    .subTitle {
+        margin-bottom: 2px;
+    }
+
+    .title {
+        font-size: 30px;
+        line-height: 40px;
+        margin-bottom: 30px;
+    }
+}

@@ -1,0 +1,63 @@
+.lotteriesSelectionMenu {
+    margin-bottom: 54px;
+}
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.mainDiv {
+    background-image: url(../../assets/final.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.pickingNumberBody {
+    -webkit-box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    padding: 40px;
+    margin-top: 40px;
+    background: #fff;   
+}
+
+@media (max-width: 1399.98px) {
+    .lotteriesSelectionMenu {
+        margin-bottom: 53px;
+    }
+}
+
+@media (max-width: 479.98px) {
+    .pickingNumberBody {
+        padding: 30px 20px;
+    }
+
+    .lotteriesSelectionMenu {
+        margin-bottom: 28px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .pickingNumberBody {
+        padding: 30px;
+    }
+
+    .lotteriesSelectionMenu{
+        margin-bottom: 42px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .lotteriesSelectionMenu {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .lotteriesSelectionMenu {
+        margin-bottom: 0;
+    }
+}
