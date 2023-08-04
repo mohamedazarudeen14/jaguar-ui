@@ -7,11 +7,11 @@ import { getSlotResults } from '../../services/result.service';
 import styles from './results.module.scss';
 
 export const Results = () => {
-    const backGround: CustomeStyle = { background: "orange" }
+    const backGround: CustomeStyle = { background: "orange", color: 'black'}
     const firstSlotLabelText = " 11.30 AM";
     const secondSlotLabelText = " 05:30 PM";
     const thirdSlotLabelText = " 07:30 PM";
-    const baseBackground: CustomeStyle = {background: "linear-gradient(251.22deg, #0C244B 0%, #0B3846 99.53%)"}
+    const baseBackground: CustomeStyle = {background: "linear-gradient(251.22deg, #0C244B 0%, #0B3846 99.53%)", color: "white"}
 
     const [resultState, setResultsState] = useState<ResultsState>({
         finalResult: null,
@@ -113,7 +113,7 @@ export const Results = () => {
                                                     data-bs-target="#pills-numbers" type="button"
                                                     role="tab" aria-controls="pills-numbers" aria-selected="false"
                                                     onClick={firstSlotButtonClick}>
-                                                    11.30 am
+                                                    <span className='font-weight-bold'>11.30 am</span>
                                                 </button>
                                             </li>
                                             <li className="nav-item" role="presentation">
@@ -123,7 +123,7 @@ export const Results = () => {
                                                     data-bs-target="#pills-winners" type="button"
                                                     role="tab" aria-controls="pills-winners" aria-selected="false"
                                                     onClick={secondSlotButtonClick}>
-                                                    05.30 pm
+                                                    <span className='font-weight-bold'>05.30 pm</span>
                                                 </button>
                                             </li>
                                             <li className="nav-item" role="presentation">
@@ -133,7 +133,7 @@ export const Results = () => {
                                                     data-bs-target="#pills-winners" type="button"
                                                     role="tab" aria-controls="pills-winners" aria-selected="false"
                                                     onClick={thirdSlotButtonClick}>
-                                                    07.30 pm
+                                                    <span className='font-weight-bold'>07.30 pm</span>
                                                 </button>
                                             </li>
                                         </ul>
@@ -142,8 +142,8 @@ export const Results = () => {
                                 <div className={`${styles.tableBody} ${styles.pickingNumberBody} mt-2 mb-4 pt-0`}>
                                     <div className='tab-content' id='pills-tabContent'>
                                         <div className='tab-pane fade active show' id='pills-Numbers' role='tabpanel' aria-labelledby='pills-numbers-tab'>
-                                            <h4 className='text-black py-4'>Prize Details -
-                                                <span style={{ color: "red" }}>{resultState.resultLabel}</span>
+                                            <h4 className='font-weight-bolder text-black py-4'>Prize Details -
+                                                <span className='font-weight-bolder' style={{ color: "red" }}>{resultState.resultLabel}</span>
                                             </h4>
                                             <NumberResultTable data={resultState.todayResult}></NumberResultTable>
                                             <ResultsTable tableData={resultState.fourDigitNumbers}></ResultsTable>
@@ -176,5 +176,6 @@ interface ResultsState {
 
 
 interface CustomeStyle {
-    background?: string
+    background?: string;
+    color?: string;
 }
