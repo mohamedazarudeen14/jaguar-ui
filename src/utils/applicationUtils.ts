@@ -19,17 +19,14 @@ export const mapSearchData = (finalResult: FinalResults) => {
 }
 
 const getRows = (finalResult: FinalResults) => {
-    let i = 0;
     const rows: Rows[] = [];
 
     finalResult.SlotResultsDtos.forEach(obj => {
-        i = i + 1;
         const row: Rows = {
-            serialNumber: i,
             date: convertDateToCustomFormat(new Date(obj.ResultDate)),
-            firstSlot: obj.FirstSlotResult ? (obj.FirstSlotResult.ResultNumber + ' ( Draw No - ' + obj.FirstSlotResult.DrawNumber + ' )') : '-',
-            secondSlot: obj.SecondSlotResult ? (obj.SecondSlotResult.ResultNumber + ' ( Draw No - ' + obj.SecondSlotResult.DrawNumber + ' )') : '-',
-            thirdSlot: obj.ThirdSlotResult ? (obj.ThirdSlotResult.ResultNumber + ' ( Draw No - ' + obj.ThirdSlotResult.DrawNumber + ' )') : '-',
+            firstSlot: obj.FirstSlotResult ? (obj.FirstSlotResult.ResultNumber + ' Draw - ' + obj.FirstSlotResult.DrawNumber) : '-',
+            secondSlot: obj.SecondSlotResult ? (obj.SecondSlotResult.ResultNumber + ' Draw - ' + obj.SecondSlotResult.DrawNumber) : '-',
+            thirdSlot: obj.ThirdSlotResult ? (obj.ThirdSlotResult.ResultNumber + ' Draw - ' + obj.ThirdSlotResult.DrawNumber) : '-',
         }
         rows.push(row);
     })
@@ -40,11 +37,6 @@ const getRows = (finalResult: FinalResults) => {
 
 const getColumns = () => {
     const columns: Columns[] = [
-        {
-            label: 'Sno',
-            field: 'serialNumber',
-            searchable: false
-        },
         {
             label: 'Date',
             field: 'date',

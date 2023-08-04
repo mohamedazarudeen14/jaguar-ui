@@ -12,7 +12,7 @@ export const ResultsTable = (props: ResultsTableProps) => {
 
     const getDrawNumber = (resultDraw: ResultWithDraw) => {
         const slotData = resultDraw;
-        return slotData ? '( Draw No - ' + slotData.DrawNumber + ' )' : '';
+        return slotData ? 'Draw - ' + slotData.DrawNumber : '';
     }
 
     return (

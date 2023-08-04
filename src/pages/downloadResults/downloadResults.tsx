@@ -85,7 +85,6 @@ export const DownloadResults = () => {
         ];
 
         const data = downloadResultsState.filteredTableData.rows.map(obj => [
-            obj.serialNumber,
             obj.date,
             obj.firstSlot,
             obj.secondSlot,

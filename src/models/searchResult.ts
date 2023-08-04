@@ -11,7 +11,6 @@ export interface Columns {
 }
 
 export interface Rows {
-    serialNumber: number;
     date: string;
     firstSlot: string;
     secondSlot: string;
