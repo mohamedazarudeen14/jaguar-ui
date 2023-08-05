@@ -25,7 +25,7 @@ export const AddResult = () => {
     }
 
     const onSlotChange = (e: any) => {
-        setAddResultState({ ...addResultState, selectedSlot: e.target.value });
+        setAddResultState({ ...addResultState, selectedSlot: parseInt(e.target.value) });
     }
 
     const onResultNumberChange = (e: any) => {
@@ -172,7 +172,7 @@ export const AddResult = () => {
                         <div className="form-group">
                             <label htmlFor="slot">Select Slot</label>
                             <select onChange={onSlotChange} className="form-control" value={addResultState.selectedSlot}>
-                                <option value={0}></option>
+                                <option value={0}>{""}</option>
                                 <option value={1}>11:30 AM</option>
                                 <option value={2}>05:30 PM</option>
                                 <option value={3}>07:30 PM</option>
