@@ -46,7 +46,7 @@ export const Layout = (props: LayoutProps) => {
             <div>
                 <div id="mainDiv" style={layoutState.customeStyles} className={`${styles.header} fixed-top`}>
                     <nav className="navbar navbar-expand-lg navbar-dark pink scrolling-navbar">
-                        <div className="row text-black ml-3" role="button">
+                        <div className="row text-white ml-3" role="button">
                             <span>
                                 <strong>BHUTAN <br></br>JAGUAR 4D</strong>
                             </span>
