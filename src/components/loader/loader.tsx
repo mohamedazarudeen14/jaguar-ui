@@ -7,7 +7,7 @@ export const Loader = (props: LoaderProps) => {
             {props.showSpinner &&
                 <div className={styles.backgroundSpinner}>
                     <SpinnerCircularFixed className={styles.centerSpinner}
-                        color='white' size={80}
+                        color='black' size={80}
                         thickness={100}>
                     </SpinnerCircularFixed>
                 </div>
