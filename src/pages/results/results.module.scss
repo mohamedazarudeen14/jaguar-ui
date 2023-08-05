@@ -5,7 +5,7 @@
     background-size: cover;
 }
 .breadcrumb {
-    background: linear-gradient(251.22deg, #0C244B 0%, #0B3846 99.53%);
+    background: deeppink;
     padding: 35px 0;
     padding-top: 90px;
     position: relative;
@@ -18,7 +18,7 @@
 }
 
 .title {
-    color: #fff;
+    color: yellow;
     font-weight: 600;
     font-size: 45px;
     line-height: 55px;
@@ -30,7 +30,7 @@
     display: inline-block;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-    background-image: linear-gradient(223.14deg, #F44A33 -17.3%, #E8AE3D 101.56%);
+    background-image: linear-gradient(223.14deg, yellow -17.3%, yellow 101.56%);
     font-family: "Barlow Condensed", sans-serif;
     font-weight: 600;
     font-size: 20px;
@@ -56,7 +56,7 @@
 }
 
 .pickingNumberHeader {
-    //background: linear-gradient(251.22deg, #0C244B 0%, #0B3846 99.53%);
+    background: repeating-radial-gradient(red, transparent 100px);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -71,7 +71,7 @@
     position: relative;
     z-index: 2;
     overflow: hidden;
-    background: maroon;
+    //background: maroon;
 }
 
 .navLink {
@@ -113,7 +113,7 @@
     -o-background-size: cover;
     background-size: cover;
     height: 50%;
-    background: yellow;
+    background: cyan;
 }
 
 .pickingNumberHeader {

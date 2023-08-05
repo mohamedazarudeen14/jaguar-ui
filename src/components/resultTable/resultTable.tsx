@@ -33,9 +33,9 @@ export const ResultsTable = (props: ResultsTableProps) => {
                                 return (
                                     <tr key={index} className="text-black">
                                         <td style={{fontSize: 'x-small'}}>{convertDateToCustomFormat(new Date(data.ResultDate))}</td>
-                                        <td>{getResultNumber(data.FirstSlotResult)}<br></br><span style={{fontSize: 'smaller'}}>{getDrawNumber(data.FirstSlotResult)}</span></td>
-                                        <td>{getResultNumber(data.SecondSlotResult)}<br></br><span style={{fontSize: 'smaller'}}>{getDrawNumber(data.SecondSlotResult)}</span></td>
-                                        <td>{getResultNumber(data.ThirdSlotResult)}<br></br><span style={{fontSize: 'smaller'}}>{getDrawNumber(data.ThirdSlotResult)}</span></td>
+                                        <td>{getResultNumber(data.FirstSlotResult)}<br></br><span style={{fontSize: 'smaller', color: 'red'}}>{getDrawNumber(data.FirstSlotResult)}</span></td>
+                                        <td>{getResultNumber(data.SecondSlotResult)}<br></br><span style={{fontSize: 'smaller', color: 'red'}}>{getDrawNumber(data.SecondSlotResult)}</span></td>
+                                        <td>{getResultNumber(data.ThirdSlotResult)}<br></br><span style={{fontSize: 'smaller', color: 'red'}}>{getDrawNumber(data.ThirdSlotResult)}</span></td>
                                     </tr>
                                 )
                             })}
