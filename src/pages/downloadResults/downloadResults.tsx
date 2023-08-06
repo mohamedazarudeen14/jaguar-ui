@@ -81,7 +81,6 @@ export const DownloadResults = () => {
             tableHeaders[1].label, 
             tableHeaders[2].label, 
             tableHeaders[3].label, 
-            tableHeaders[4].label
         ];
 
         const data = downloadResultsState.filteredTableData.rows.map(obj => [
