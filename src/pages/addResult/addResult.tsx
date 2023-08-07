@@ -161,7 +161,7 @@ export const AddResult = () => {
                 <div className={`${styles.mainDiv} col-md-3 col-md-offset-4`}>
                     <form>
                         <div className="form-group">
-                            <label htmlFor="date">Select Date</label>
+                            <label htmlFor="date"><b>Select Date</b></label>
                             <input type="date"
                                 className='form-control'
                                 id="date2"
@@ -170,7 +170,7 @@ export const AddResult = () => {
                             />
                         </div>
                         <div className="form-group">
-                            <label htmlFor="slot">Select Slot</label>
+                            <label htmlFor="slot"><b>Select Slot</b></label>
                             <select onChange={onSlotChange} className="form-control" value={addResultState.selectedSlot}>
                                 <option value={0}>{""}</option>
                                 <option value={1}>11:30 AM</option>
@@ -179,7 +179,7 @@ export const AddResult = () => {
                             </select>
                         </div>
                         <div className="form-group">
-                            <label htmlFor="resultNumber">Result Number</label>
+                            <label htmlFor="resultNumber"><b>Result Number</b></label>
                             <input type="text" maxLength={4} className="form-control"
                                 id="resultNumber" placeholder="Result Number"
                                 onChange={onResultNumberChange}
