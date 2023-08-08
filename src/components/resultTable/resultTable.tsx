@@ -1,5 +1,6 @@
 import { ResultWithDraw, SlotResultsDto } from "../../models/finalResult"
 import { convertDateToCustomFormat } from "../../utils/applicationUtils";
+import styles from './resultTable.module.scss';
 
 export const ResultsTable = (props: ResultsTableProps) => {
     const { tableData } = props;
@@ -7,12 +8,12 @@ export const ResultsTable = (props: ResultsTableProps) => {
 
     const getResultNumber = (resultDraw: ResultWithDraw) => {
         const slotData = resultDraw;
-        return slotData ? slotData.ResultNumber.split('').join(' ') : '-';
+        return <span className={styles.resultNumber}>{slotData ? slotData.ResultNumber.split('').join(' ') : '-'}</span>;
     }
 
     const getDrawNumber = (resultDraw: ResultWithDraw) => {
         const slotData = resultDraw;
-        return slotData ? 'Draw - ' + slotData.DrawNumber : '';
+        return <span className={styles.drawNumber}>{slotData ? 'Draw - ' + slotData.DrawNumber : ''}</span>;
     }
 
     return (
@@ -23,6 +24,7 @@ export const ResultsTable = (props: ResultsTableProps) => {
                         <tr>
                             <th style={{width: '10%'}}>Date</th>
                             <th>11:30 AM</th>
+                            <th>01:30 PM</th>
                             <th>05:30 PM</th>
                             <th>07:30 PM</th>
                         </tr>
@@ -33,9 +35,10 @@ export const ResultsTable = (props: ResultsTableProps) => {
                                 return (
                                     <tr key={index} className="text-black">
                                         <td style={{fontSize: 'x-small'}}>{convertDateToCustomFormat(new Date(data.ResultDate))}</td>
-                                        <td>{getResultNumber(data.FirstSlotResult)}<br></br><span style={{fontSize: 'smaller', color: 'red'}}>{getDrawNumber(data.FirstSlotResult)}</span></td>
-                                        <td>{getResultNumber(data.SecondSlotResult)}<br></br><span style={{fontSize: 'smaller', color: 'red'}}>{getDrawNumber(data.SecondSlotResult)}</span></td>
-                                        <td>{getResultNumber(data.ThirdSlotResult)}<br></br><span style={{fontSize: 'smaller', color: 'red'}}>{getDrawNumber(data.ThirdSlotResult)}</span></td>
+                                        <td>{getResultNumber(data.FirstSlotResult)}<br></br>{getDrawNumber(data.FirstSlotResult)}</td>
+                                        <td>{getResultNumber(data.FourthSlotResult)}<br></br>{getDrawNumber(data.FourthSlotResult)}</td>
+                                        <td>{getResultNumber(data.SecondSlotResult)}<br></br>{getDrawNumber(data.SecondSlotResult)}</td>
+                                        <td>{getResultNumber(data.ThirdSlotResult)}<br></br>{getDrawNumber(data.ThirdSlotResult)}</td>                                        
                                     </tr>
                                 )
                             })}

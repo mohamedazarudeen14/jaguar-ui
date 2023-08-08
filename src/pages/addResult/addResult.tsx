@@ -174,6 +174,7 @@ export const AddResult = () => {
                             <select onChange={onSlotChange} className="form-control" value={addResultState.selectedSlot}>
                                 <option value={0}>{""}</option>
                                 <option value={1}>11:30 AM</option>
+                                <option value={4}>01:30 PM</option>
                                 <option value={2}>05:30 PM</option>
                                 <option value={3}>07:30 PM</option>
                             </select>

@@ -15,4 +15,5 @@ export interface Rows {
     firstSlot: string;
     secondSlot: string;
     thirdSlot: string;
+    fourthSlot: string;
 }

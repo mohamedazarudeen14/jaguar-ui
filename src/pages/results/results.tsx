@@ -11,6 +11,7 @@ export const Results = () => {
     const firstSlotLabelText = " 11.30 AM";
     const secondSlotLabelText = " 05:30 PM";
     const thirdSlotLabelText = " 07:30 PM";
+    const fourthSlotLabelText = " 01:30 PM";
     const baseBackground: CustomeStyle = {background: "linear-gradient(251.22deg, #0C244B 0%, #0B3846 99.53%)", color: "white"}
 
     const [resultState, setResultsState] = useState<ResultsState>({
@@ -20,6 +21,7 @@ export const Results = () => {
         firstSlotButtonStyle: backGround,
         secondSlotButtonStyle: baseBackground,
         thirdSlotButtonStyle: baseBackground,
+        fourthSlotButtonStyle: baseBackground,
         resultLabel: firstSlotLabelText
     });
 
@@ -50,6 +52,7 @@ export const Results = () => {
             firstSlotButtonStyle: backGround,
             secondSlotButtonStyle: baseBackground,
             thirdSlotButtonStyle: baseBackground,
+            fourthSlotButtonStyle: baseBackground,
             resultLabel: firstSlotLabelText,
             todayResult: firsSlotResult && firsSlotResult.length > 0 ? firsSlotResult[0] : null,
         });
@@ -63,6 +66,7 @@ export const Results = () => {
             firstSlotButtonStyle: baseBackground,
             secondSlotButtonStyle: backGround,
             thirdSlotButtonStyle: baseBackground,
+            fourthSlotButtonStyle: baseBackground,
             resultLabel: secondSlotLabelText,
             todayResult: secondSlotResult && secondSlotResult.length > 0 ? secondSlotResult[0] : null
         });
@@ -76,8 +80,23 @@ export const Results = () => {
             firstSlotButtonStyle: baseBackground,
             secondSlotButtonStyle: baseBackground,
             thirdSlotButtonStyle: backGround,
+            fourthSlotButtonStyle: baseBackground,
             resultLabel: thirdSlotLabelText,
             todayResult: thirdSlotResult && thirdSlotResult.length > 0 ? thirdSlotResult[0] : null
+        });
+    }
+
+    const fourthSlotButtonClick = () => {
+        const fourthSlotResult = resultState.finalResult.ResultNumbers?.filter(obj => obj.Slot === Slot.FourthSlot);
+
+        setResultsState({
+            ...resultState,
+            firstSlotButtonStyle: baseBackground,
+            secondSlotButtonStyle: baseBackground,
+            thirdSlotButtonStyle: baseBackground,
+            fourthSlotButtonStyle: backGround,
+            resultLabel: fourthSlotLabelText,
+            todayResult: fourthSlotResult && fourthSlotResult.length > 0 ? fourthSlotResult[0] : null
         });
     }
 
@@ -114,6 +133,16 @@ export const Results = () => {
                                                     role="tab" aria-controls="pills-numbers" aria-selected="false"
                                                     onClick={firstSlotButtonClick}>
                                                     <span className='font-weight-bold'>11.30 am</span>
+                                                </button>
+                                            </li>
+                                            <li className="nav-item" role="presentation">
+                                                <button style={resultState.fourthSlotButtonStyle}
+                                                    className={`${styles.navLink}`}
+                                                    id="pills-numbers-tab" data-bs-toggle="pill"
+                                                    data-bs-target="#pills-numbers" type="button"
+                                                    role="tab" aria-controls="pills-numbers" aria-selected="false"
+                                                    onClick={fourthSlotButtonClick}>
+                                                    <span className='font-weight-bold'>01.30 pm</span>
                                                 </button>
                                             </li>
                                             <li className="nav-item" role="presentation">
@@ -171,6 +200,7 @@ interface ResultsState {
     firstSlotButtonStyle: CustomeStyle;
     secondSlotButtonStyle: CustomeStyle;
     thirdSlotButtonStyle: CustomeStyle;
+    fourthSlotButtonStyle: CustomeStyle;
     resultLabel: string;
 }
 

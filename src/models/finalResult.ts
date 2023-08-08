@@ -3,6 +3,7 @@ export interface SlotResultsDto {
     FirstSlotResult: ResultWithDraw;
     SecondSlotResult: ResultWithDraw;
     ThirdSlotResult: ResultWithDraw;
+    FourthSlotResult: ResultWithDraw;
 }
 
 export interface ResultWithDraw {
@@ -13,7 +14,8 @@ export interface ResultWithDraw {
 export enum Slot {
     FirstSlot = 1,
     SecondSlot = 2,
-    ThirdSlot = 3
+    ThirdSlot = 3,
+    FourthSlot = 4,
 }
 
 export enum SortType {

@@ -53,7 +53,7 @@ export const DownloadResults = () => {
     const filterTableDataOnSearch = (searchString: string) => {
         const filterData = downloadResultsState.tableData.rows.filter(obj => obj.date.includes(searchString)
             || obj.firstSlot.includes(searchString) || obj.secondSlot.includes(searchString)
-            || obj.thirdSlot.includes(searchString)
+            || obj.thirdSlot.includes(searchString) || obj.fourthSlot.includes(searchString)
         );
 
         setDownloadResultsState({
@@ -80,14 +80,16 @@ export const DownloadResults = () => {
             tableHeaders[0].label,
             tableHeaders[1].label, 
             tableHeaders[2].label, 
-            tableHeaders[3].label, 
+            tableHeaders[3].label,
+            tableHeaders[4].label
         ];
 
         const data = downloadResultsState.filteredTableData.rows.map(obj => [
             obj.date,
             obj.firstSlot,
+            obj.fourthSlot,
             obj.secondSlot,
-            obj.thirdSlot
+            obj.thirdSlot          
         ]);
 
         doc.text(title, marginLeft, 40);

@@ -25,8 +25,9 @@ const getRows = (finalResult: FinalResults) => {
         const row: Rows = {
             date: convertDateToCustomFormat(new Date(obj.ResultDate)),
             firstSlot: obj.FirstSlotResult ? (obj.FirstSlotResult.ResultNumber + ' Draw - ' + obj.FirstSlotResult.DrawNumber) : '-',
+            fourthSlot: obj.FourthSlotResult ? (obj.FourthSlotResult.ResultNumber + ' Draw - ' + obj.FourthSlotResult.DrawNumber) : '-',
             secondSlot: obj.SecondSlotResult ? (obj.SecondSlotResult.ResultNumber + ' Draw - ' + obj.SecondSlotResult.DrawNumber) : '-',
-            thirdSlot: obj.ThirdSlotResult ? (obj.ThirdSlotResult.ResultNumber + ' Draw - ' + obj.ThirdSlotResult.DrawNumber) : '-',
+            thirdSlot: obj.ThirdSlotResult ? (obj.ThirdSlotResult.ResultNumber + ' Draw - ' + obj.ThirdSlotResult.DrawNumber) : '-'         
         }
         rows.push(row);
     })
@@ -45,6 +46,11 @@ const getColumns = () => {
         {
             label: '11:30 AM',
             field: 'firstSlot',
+            searchable: true,
+        },
+        {
+            label: '01:30 PM',
+            field: 'fourthSlot',
             searchable: true,
         },
         {
